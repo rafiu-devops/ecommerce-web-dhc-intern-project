@@ -4,41 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart-Chekout</title>
-    <link rel="stylesheet" href="../CSS/main.css"></head>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/chekout.css">
 
-    <!-- FontAwesome CDN -->
+
+     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<body>
+
+</head>
+
+   
+<body class="checkout-page">
     <!-- Header -->
     <header class="header">
-         <div class="brand">
-            <div class="brand-icon">🛍️</div>
-            <div class="brand-text">Fashion Store</div>
-        </div>
         
-                <div class="header-icons">
+        <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+            <div class="brand-icon">
+                <img src="/Images/nav-svgs/logo-symbol.svg" alt="">
+            </div>
+            <div class="brand-text">Brand</div>
+        </a>
+        
+        
+                   <div class="header-icons">
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-user"></i>          <!-- Profile icon -->
+                 <img src="/Images/nav-svgs//profile.svg" alt="Profile Icon"> <!-- Profile icon -->
                 </div>
                 <span class="icon-text">Profile</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-envelope"></i>      <!-- Message icon -->
+                    <img src="/Images/nav-svgs//sms.svg" alt="Message Icon">     <!-- Message icon -->
                 </div>
                 <span class="icon-text">Message</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-box"></i>           <!-- Orders icon -->
+                     <img src="/Images/nav-svgs//orders.svg" alt="Order Icon">        <!-- Orders icon -->
                 </div>
                 <span class="icon-text">Orders</span>
             </a>
-            <a href="#" class="icon-item">
+            <a href="/HTML/cartchekout.html" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
+                     <img src="/Images/nav-svgs//cart.svg" alt="Cart Icon"> <!-- Cart icon -->
                 </div>
                 <span class="icon-text">My cart</span>
             </a>
@@ -48,7 +58,272 @@
     
     <!-- Main Content (Placeholder) -->
     <main class="main-content">
-        <p>Main content area - Add your pages here</p>
+    
+    <!-- Cart Checkout Section - Add this inside your main-content div -->
+<div class="cart-header">
+    My cart (3)
+</div>
+
+<div class="cart-container">
+    <!-- Left Section - Cart Products -->
+    <div class="cart-products">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <div class="product-image">
+                <img src="/Images/cart-layout/img-group.png" alt="">
+            </div>
+            <div class="product-details">
+                <div class="product-title">T-shirts with multiple colors, for men and lady</div>
+                <div class="product-specs">Size: medium, Color: blue, Material: Plastic</div>
+                <div class="product-seller">Seller: Artel Market</div>
+                <div class="product-actions">
+                    <button class="remove-btn">Remove</button>
+                    <button class="save-btn">Save for later</button>
+                </div>
+            </div>
+            <div class="product-right">
+                <div class="product-price">$78.99</div>
+                <div class="quantity-section">
+                    <span class="quantity-label">Qty:</span>
+                    <select class="quantity-select">
+                        <option value="9" selected>9</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item">
+            <div class="product-image">
+                <img src="/Images/cart-layout/img-group-1.png" alt="">
+            </div>
+            <div class="product-details">
+                <div class="product-title">T-shirts with multiple colors, for men and lady</div>
+                <div class="product-specs">Size: medium, Color: blue, Material: Plastic</div>
+                <div class="product-seller">Seller: Best factory LLC</div>
+                <div class="product-actions">
+                    <button class="remove-btn">Remove</button>
+                    <button class="save-btn">Save for later</button>
+                </div>
+            </div>
+            <div class="product-right">
+                <div class="product-price">$39.00</div>
+                <div class="quantity-section">
+                    <span class="quantity-label">Qty:</span>
+                    <select class="quantity-select">
+                        <option value="3" selected>3</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item">
+            <div class="product-image">
+                <img src="/Images/cart-layout/img-group-2.png" alt="">
+            </div> 
+            <div class="product-details">
+                <div class="product-title">T-shirts with multiple colors, for men and lady</div>
+                <div class="product-specs">Size: medium, Color: blue, Material: Plastic</div>
+                <div class="product-seller">Seller: Artel Market</div>
+                <div class="product-actions">
+                    <button class="remove-btn">Remove</button>
+                    <button class="save-btn">Save for later</button>
+                </div>
+            </div>
+            <div class="product-right">
+                <div class="product-price">$170.50</div>
+                <div class="quantity-section">
+                    <span class="quantity-label">Qty:</span>
+                    <select class="quantity-select">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Actions -->
+<div class="cart-bottom-actions">
+    <a href="/HTML/categories-two.html" class="back-to-shop-btn">
+        <i class="fas fa-arrow-left"></i>
+        Back to shop
+    </a>
+    <button class="remove-all-btn">Remove all</button>
+</div>    
+        
+
+    </div>
+
+    <!-- Right Section - Coupon and Payment -->
+    <div class="cart-sidebar">
+        <!-- Coupon Section -->
+        <div class="coupon-section">
+            <div class="coupon-header">Have a coupon?</div>
+            <div class="coupon-input-group">
+                <input type="text" class="coupon-input" placeholder="Add coupon">
+                <button class="coupon-apply-btn">Apply</button>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <div class="order-summary">
+                <div class="summary-row">
+                    <span class="summary-label">Subtotal:</span>
+                    <span class="summary-value">$1403.97</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Discount:</span>
+                    <span class="summary-value discount">- $60.00</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Tax:</span>
+                    <span class="summary-value tax">+ $14.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Total:</span>
+                    <span>$1357.97</span>
+                </div>
+            </div>
+
+            <button class="checkout-btn">Checkout</button>
+
+            <div class="payment-methods">
+                <div class="payment-icon payment-american-express"></div>
+                <div class="payment-icon payment-mastercard"></div>
+                <div class="payment-icon payment-paypal"></div>
+                <div class="payment-icon payment-visa"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features-section">
+    <div class="feature-item">
+        <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        <div class="feature-content">
+            <div class="feature-title">Secure payment</div>
+            <div class="feature-description">Have you ever finally just</div>
+        </div>
+    </div>
+    
+    <div class="feature-item">
+        <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+        </div>
+        <div class="feature-content">
+            <div class="feature-title">Customer support</div>
+            <div class="feature-description">Have you ever finally just</div>
+        </div>
+    </div>
+    
+    <div class="feature-item">
+        <div class="feature-icon">
+            <i class="fas fa-truck"></i>
+        </div>
+        <div class="feature-content">
+            <div class="feature-title">Free delivery</div>
+            <div class="feature-description">Have you ever finally just</div>
+        </div>
+    </div>
+</div>
+
+<!-- Saved for Later Section -->
+<div class="saved-section">
+    <div class="saved-header">Saved for later</div>
+    
+    <div class="saved-products">
+        <!-- Saved Product 1 -->
+        <div class="saved-product">
+            <div class="saved-product-image">
+                <img src="/Images/cart-layout/img-1.png" alt="">
+            </div>
+            <div class="saved-product-details">
+                <div class="saved-product-price">$99.50</div>
+                <div class="saved-product-title">GoPro HERO6 4K Action Camera - Black</div>
+                <button class="move-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Move to cart
+                </button>
+            </div>
+        </div>
+        
+        <!-- Saved Product 2 -->
+        <div class="saved-product">
+            <div class="saved-product-image">
+                <img src="/Images/cart-layout/img-2.png" alt="">
+            </div>
+            <div class="saved-product-details">
+                <div class="saved-product-price">$99.50</div>
+                <div class="saved-product-title">GoPro HERO6 4K Action Camera - Black</div>
+                <button class="move-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Move to cart
+                </button>
+            </div>
+        </div>
+        
+        <!-- Saved Product 3 -->
+        <div class="saved-product">
+            <div class="saved-product-image">
+                <img src="/Images/cart-layout/img-3.png" alt="">
+            </div>
+            <div class="saved-product-details">
+                <div class="saved-product-price">$99.50</div>
+                <div class="saved-product-title">GoPro HERO6 4K Action Camera - Black</div>
+                <button class="move-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Move to cart
+                </button>
+            </div>
+        </div>
+        
+        <!-- Saved Product 4 -->
+        <div class="saved-product">
+            <div class="saved-product-image">
+                <img src="/Images/cart-layout/img-4.png" alt="">
+            </div>
+            <div class="saved-product-details">
+                <div class="saved-product-price">$99.50</div>
+                <div class="saved-product-title">GoPro HERO6 4K Action Camera - Black</div>
+                <button class="move-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Move to cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Promotional Banner - 1180x120 -->
+        <div class="promo-banner">
+            <div class="promo-content">
+                <h2>Super discount on more than 100 USD</h2>
+                <p>Have you ever finally just write dummy info</p>
+            </div>
+            <button class="promo-btn">Shop now</button>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -56,8 +331,10 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="brand">
-                    <div class="brand-icon">🛍️</div>
-                    <div class="brand-text">Fashion Store</div>
+                    <div class="brand-icon">
+                         <img src="/Images/nav-svgs/logo-symbol.svg" alt=""> 
+                    </div>
+                    <div class="brand-text">Brand</div>
                 </div>
                 <p class="footer-description">
                     Best information about the company goes here, go visit and explore about us.
@@ -65,19 +342,29 @@
 
                  <div class="social-icons">
                     <a href="#" class="social-icon facebook">
-                        <i class="fab fa-facebook-f"></i>
+                        <i>
+                            <img src="/Images/social/fb.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon twitter">
-                        <i class="fab fa-twitter"></i>
+                        <i>
+                            <img src="/Images/social/twit.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon linkedin">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i>
+                            <img src="/Images/social/linkIn.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
+                        <i>
+                            <img src="/Images/social/insta.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon youtube">
-                        <i class="fab fa-youtube"></i>
+                        <i>
+                            <img src="/Images/social/yt.svg" alt="">
+                        </i>
                     </a>
                 </div>
             </div>
@@ -117,13 +404,17 @@
             <div class="footer-column">
                 <h4>Get app</h4>
                 <div class="app-downloads">
-                    <a href="#" class="app-btn apple">
-                        <i class="fab fa-apple"></i>
-                        <span>App Store</span>
+                     <a href="#" class="app-btn apple">
+                        <i>
+                            <img src="/Images/Misc/market-button.svg" alt="">
+                        </i>
+                        
                     </a>
                     <a href="#" class="app-btn google">
-                        <i class="fab fa-google-play"></i>
-                        <span>Google Play</span>
+                        <i>
+                            <img src="/Images/Misc/Group.svg" alt="">
+                        </i>
+                        
                     </a>
                 </div>
             </div>
@@ -131,12 +422,32 @@
         
         <div class="footer-bottom">
             <p>© 2023 Ecommerce.</p>
-            <div class="language-selector">
-                <div class="flag"></div>
-                <span>English</span>
-                <span>▲</span>
+             <div class="language-selector">
+                <span>
+                    <img src="/Images/flags/icon-2.svg" alt="">
+                </span>
+                 <span>English </span>
+                <i class="fas fa-chevron-up"></i>
+
+                <!-- Dropdown -->
+            <div class="language-dropdown">
+                <div class="lang-option"><img src="/Images/flags/icon-2.svg" alt=""> English</div>
+                <div class="lang-option"><img src="/Images/flags/icon-1.svg" alt=""> Urdu</div>
+                <div class="lang-option"><img src="/Images/flags/icon-3.svg" alt=""> French</div>
+                <div class="lang-option"><img src="/Images/flags/icon-4.svg" alt=""> German</div>
+                <div class="lang-option"><img src="/Images/flags/icon-5.svg" alt=""> Spanish</div>
+                <div class="lang-option"><img src="/Images/flags/icon-6.svg" alt=""> Italian</div>
+                <div class="lang-option"><img src="/Images/flags/icon-7.svg" alt=""> Chinese</div>
+                <div class="lang-option"><img src="/Images/flags/icon-8.svg" alt=""> Japanese</div>
+                <div class="lang-option"><img src="/Images/flags/icon-9.svg" alt=""> Russian</div>
+                <div class="lang-option"><img src="/Images/flags/icon.svg" alt=""> Arabic</div>
+            </div>
+
             </div>
         </div>
     </footer>
+
+
+    <script src="../Java-Script/main.js"></script>
 </body>
 </html>

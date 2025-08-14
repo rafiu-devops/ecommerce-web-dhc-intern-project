@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
-    <link rel="stylesheet" href="../CSS/main.css"></head>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/product-page.css">
+
 
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<body>
+
+</head>
+
+    
+<body class="product-page">
     <!-- Header -->
     <header class="header">
-         <div class="brand">
-            <div class="brand-icon">🛍️</div>
-            <div class="brand-text">Fashion Store</div>
-        </div>
-        
+           <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+            <div class="brand-icon">
+                <img src="/Images/nav-svgs/logo-symbol.svg" alt="">
+            </div>
+            <div class="brand-text">Brand</div>
+        </a>
         <div class="search-section">
             <input type="text" class="search-input" placeholder="Search">
             <select class="category-dropdown">
@@ -28,28 +35,28 @@
             <button class="search-btn">Search</button>
         </div>
         
-                <div class="header-icons">
+                   <div class="header-icons">
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-user"></i>          <!-- Profile icon -->
+                 <img src="/Images/nav-svgs//profile.svg" alt="Profile Icon"> <!-- Profile icon -->
                 </div>
                 <span class="icon-text">Profile</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-envelope"></i>      <!-- Message icon -->
+                    <img src="/Images/nav-svgs//sms.svg" alt="Message Icon">     <!-- Message icon -->
                 </div>
                 <span class="icon-text">Message</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-box"></i>           <!-- Orders icon -->
+                     <img src="/Images/nav-svgs//orders.svg" alt="Order Icon">        <!-- Orders icon -->
                 </div>
                 <span class="icon-text">Orders</span>
             </a>
-            <a href="#" class="icon-item">
+            <a href="/HTML/cartchekout.html" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
+                     <img src="/Images/nav-svgs//cart.svg" alt="Cart Icon"> <!-- Cart icon -->
                 </div>
                 <span class="icon-text">My cart</span>
             </a>
@@ -59,6 +66,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
+         <a href="/HTML/categories-two.html" class="category-link">
             <div class="category-menu">
                 <div class="hamburger">
                     <span></span>
@@ -67,6 +75,8 @@
                 </div>
                 <span>All category</span>
             </div>
+        </a>
+
             
             <div class="nav-menu">
                 <a href="#" class="nav-item">Hot offers</a>
@@ -77,51 +87,429 @@
             </div>
         </div>
         
-        <div class="nav-right">
-            <div class="nav-option">
-                <span>English, USD</span>
-                <span>▼</span>
-            </div>
-            <div class="nav-option">
-                <span>Ship to</span>
-                <div class="flag"></div>
-                <span>▼</span>
-            </div>
+         <div class="nav-right">
+    <!-- Language & Currency Dropdown -->
+    <div class="nav-option dropdown-wrapper" id="langCurrencyDropdown">
+        <span class="selected-option">English, USD</span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="dropdown">
+            <div>English, USD</div>
+            <div>Urdu, PKR</div>
+            <div>Hindi, INR</div>
+            <div>French, EUR</div>
+            <div>German, EUR</div>
+            <div>Spanish, EUR</div>
+            <div>Chinese, CNY</div>
+            <div>Japanese, JPY</div>
+            <div>Arabic, AED</div>
+            <div>Russian, RUB</div>
         </div>
+    </div>
+
+    <!-- Country Dropdown -->
+    <div class="nav-option dropdown-wrapper" id="countryDropdown">
+        <span>Ship to</span>
+        <span class="selected-option"> 
+            <img src="/Images/flags/icon-8.svg" alt=""> 
+        </span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="dropdown">
+            <div>  <img src="/Images/flags/icon-8.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-1.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-2.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-3.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-4.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-5.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-6.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-7.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-9.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon.svg" alt=""> </div>
+        </div>
+    </div>
+</div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+     <nav class="breadcrumb-container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-separator">
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Clothings</a>
+            </li>
+            <li class="breadcrumb-separator">
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Men's wear</a>
+            </li>
+            <li class="breadcrumb-separator">
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li class="breadcrumb-item active">
+                Summer clothing
+            </li>
+        </ol>
     </nav>
 
     <!-- Main Content (Placeholder) -->
-    <main class="main-content">
-        <p>Main content area - Add your pages here</p>
-    </main>
+    <div class="main-container">
+          <!-- Product Section - 1180x580 -->
+        <div class="product-section">
+            <!-- Product Images - Left Side -->
+            <div class="product-images">
+                <div class="main-product-image">
+                    <img src="/Images/product-page/image 34.png" alt="Product Image">
+                </div>
+                <div class="thumbnail-images">
+                    <div class="thumbnail active">
+                        <img src="/Images/product-page/pd-mokups/image 35.png" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/Images/product-page/pd-mokups/image 36.png" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/Images/product-page/pd-mokups/image 37.png" alt="Thumbnail 3">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/Images/product-page/pd-mokups/image.png" alt="Thumbnail 4">
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Product Details - Center 430x514 -->
+            <div class="product-details">
+                <div class="stock-status">
+                    <i class="fas fa-check-circle"></i>
+                    In stock
+                </div>
+                
+                <h1 class="product-title">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
+                
+                <div class="rating-section">
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="far fa-star star"></i>
+                        <span class="rating-text">9.3</span>
+                    </div>
+                    <div class="reviews-sold">
+                        <span><i class="far fa-comment-dots"></i> 32 reviews</span>
+                        <span><i class="fas fa-thumbs-up"></i> 154 sold</span>
+                    </div>
+                </div>
+
+                <div class="price-section">
+                    <div class="price-item">
+                        <div class="price-value current">$98.00</div>
+                        <div class="price-label">50-100 pcs</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value original">$90.00</div>
+                        <div class="price-label">100-700 pcs</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-value bulk">$78.00</div>
+                        <div class="price-label">700+ pcs</div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="info-row">
+                        <span class="info-label">Price:</span>
+                        <span class="info-value">Negotiable</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Type:</span>
+                        <span class="info-value">Classic shoes</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Material:</span>
+                        <span class="info-value">Plastic material</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Design:</span>
+                        <span class="info-value">Modern nice</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Customization:</span>
+                        <span class="info-value">Customized logo and design custom packages</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Protection:</span>
+                        <span class="info-value">Refund Policy</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Warranty:</span>
+                        <span class="info-value">2 years full warranty</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supplier Section - Right Side 280x325 -->
+            <div class="supplier-section">
+                <div class="supplier-header">
+                    <div class="supplier-avatar">R</div>
+                    <div class="supplier-info">
+                        <h4>Supplier</h4>
+                        <h3>Guanjoi Trading LLC</h3>
+                    </div>
+                </div>
+
+                <div class="supplier-details">
+                    <div class="supplier-detail">
+                        <img src="https://flagcdn.com/w20/de.png" alt="Germany" style="width: 16px; height: 12px;">
+                        <span>Germany, Berlin</span>
+                    </div>
+                    <div class="supplier-detail">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Verified Seller</span>
+                    </div>
+                    <div class="supplier-detail">
+                        <i class="fas fa-globe"></i>
+                        <span>Worldwide shipping</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Send inquiry</button>
+                    <button class="btn btn-outline">Seller's profile</button>
+                </div>
+
+                <!-- Save for Later - Outside supplier section, below it - 133x24 -->
+        <div class="save-later">
+            <i class="far fa-heart"></i>
+            <span>Save for later</span>
+        </div>
+
+            </div>
+        </div>
+
+        
+
+        <!-- Bottom Section: Description + You May Like -->
+        <div class="bottom-section">
+            <!-- Description Section - 880x618 -->
+            <div class="description-section">
+                <div class="description-tabs">
+                    <button class="tab active">Description</button>
+                    <button class="tab">Reviews</button>
+                    <button class="tab">Shipping</button>
+                    <button class="tab">About seller</button>
+                </div>
+
+                <div class="description-content">
+                    <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                    <p class="description-text">
+                        Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+
+                    <!-- Specs Table - 567x180 -->
+                    <div class="specs-table">
+                        <div class="specs-row">
+                            <div class="specs-label">Model</div>
+                            <div class="specs-value">#8786867</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Style</div>
+                            <div class="specs-value">Classic style</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Certificate</div>
+                            <div class="specs-value">ISO-898921212</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Size</div>
+                            <div class="specs-value">34mm x 450mm x 19mm</div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="specs-label">Memory</div>
+                            <div class="specs-value">36GB RAM</div>
+                        </div>
+                    </div>
+
+                    <ul class="features-list">
+                        <li>Some great feature name here</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur</li>
+                        <li>Duis aute irure dolor in reprehenderit</li>
+                        <li>Some great feature name here</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- You May Like Section - 280x553 -->
+            <div class="recommendations">
+                <h3>You may like</h3>
+                
+                <!-- Each recommendation item - 242x80 -->
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="/Images/product-page/Group 558-4.png" alt="Men Blazers">
+                    </div>
+                    <div class="recommendation-info">
+                        <div class="recommendation-title">Men Blazers Sets Elegant Formal</div>
+                        <div class="recommendation-price">$7.00 - $99.50</div>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="/Images/product-page/Group 558-3.png" alt="Men Shirt Sleeve">
+                    </div>
+                    <div class="recommendation-info">
+                        <div class="recommendation-title">Men Shirt Sleeve Polo Contrast</div>
+                        <div class="recommendation-price">$7.00 - $99.50</div>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="/Images/product-page/Group 558-2.png" alt="Apple Watch">
+                    </div>
+                    <div class="recommendation-info">
+                        <div class="recommendation-title">Apple Watch Series Space Gray</div>
+                        <div class="recommendation-price">$7.00 - $99.50</div>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="/Images/product-page/Group 558-1.png" alt="Basketball Crew">
+                    </div>
+                    <div class="recommendation-info">
+                        <div class="recommendation-title">Basketball Crew Socks Long Stuff</div>
+                        <div class="recommendation-price">$7.00 - $99.50</div>
+                    </div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="/Images/product-page/Group 558.png" alt="Summer Men's">
+                    </div>
+                    <div class="recommendation-info">
+                        <div class="recommendation-title">New Summer Men's castrol T-Shirts</div>
+                        <div class="recommendation-price">$7.00 - $99.50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <!-- Related Products Section  -->
+        <div class="related-products">
+            <h3>Related products</h3>
+            <div class="related-products-grid">
+                <div class="related-product">
+                    <div class="related-product-image">
+                        <img src="/Images/product-page/img-4.png" alt="Thermos">
+                    </div>
+                    <div class="related-product-title">Xiaomi Redmi 8 Original</div>
+                    <div class="related-product-price">$32.00-$40.00</div>
+                </div>
+
+                <div class="related-product">
+                    <div class="related-product-image">
+                        <img src="/Images/product-page/img-3.png" alt="Wallet">
+                    </div>
+                    <div class="related-product-title">Xiaomi Redmi 8 Original</div>
+                    <div class="related-product-price">$32.00-$40.00</div>
+                </div>
+
+                <div class="related-product">
+                    <div class="related-product-image">
+                        <img src="/Images/product-page/img-2.png" alt="Wallet">
+                    </div>
+                    <div class="related-product-title">Xiaomi Redmi 8 Original</div>
+                    <div class="related-product-price">$32.00-$40.00</div>
+                </div>
+
+                <div class="related-product">
+                    <div class="related-product-image">
+                        <img src="/Images/product-page/img.png" alt="Wallet">
+                    </div>
+                    <div class="related-product-title">Xiaomi Redmi 8 Original</div>
+                    <div class="related-product-price">$32.00-$40.00</div>
+                </div>
+
+                <div class="related-product">
+                    <div class="related-product-image">
+                        <img src="/Images/product-page/img-1.png" alt="Wallet">
+                    </div>
+                    <div class="related-product-title">Xiaomi Redmi 8 Original</div>
+                    <div class="related-product-price">$32.00-$40.00</div>
+                </div>
+
+                <div class="related-product">
+                    <div class="related-product-image">
+                        <img src="/Images/product-page/img-4-1.png" alt="Wallet">
+                    </div>
+                    <div class="related-product-title">Xiaomi Redmi 8 Original</div>
+                    <div class="related-product-price">$32.00-$40.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promotional Banner - 1180x120 -->
+        <div class="promo-banner">
+            <div class="promo-content">
+                <h2>Super discount on more than 100 USD</h2>
+                <p>Have you ever finally just write dummy info</p>
+            </div>
+            <button class="promo-btn">Shop now</button>
+        </div>
+    </div>
+        
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="brand">
-                    <div class="brand-icon">🛍️</div>
-                    <div class="brand-text">Fashion Store</div>
+                    <div class="brand-icon">
+                         <img src="/Images/nav-svgs/logo-symbol.svg" alt=""> <!--Brand Icon-->
+                    </div>
+                    <div class="brand-text">Brand</div>
                 </div>
                 <p class="footer-description">
                     Best information about the company goes here, go visit and explore about us.
                 </p>
 
                  <div class="social-icons">
-                    <a href="#" class="social-icon facebook">
-                        <i class="fab fa-facebook-f"></i>
+                   <a href="#" class="social-icon facebook">
+                        <i>
+                            <img src="/Images/social/fb.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon twitter">
-                        <i class="fab fa-twitter"></i>
+                        <i>
+                            <img src="/Images/social/twit.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon linkedin">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i>
+                            <img src="/Images/social/linkIn.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
+                        <i>
+                            <img src="/Images/social/insta.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon youtube">
-                        <i class="fab fa-youtube"></i>
+                        <i>
+                            <img src="/Images/social/yt.svg" alt="">
+                        </i>
                     </a>
                 </div>
             </div>
@@ -161,13 +549,17 @@
             <div class="footer-column">
                 <h4>Get app</h4>
                 <div class="app-downloads">
-                    <a href="#" class="app-btn apple">
-                        <i class="fab fa-apple"></i>
-                        <span>App Store</span>
+                     <a href="#" class="app-btn apple">
+                        <i>
+                            <img src="/Images/Misc/market-button.svg" alt="">
+                        </i>
+                        
                     </a>
                     <a href="#" class="app-btn google">
-                        <i class="fab fa-google-play"></i>
-                        <span>Google Play</span>
+                        <i>
+                            <img src="/Images/Misc/Group.svg" alt="">
+                        </i>
+                        
                     </a>
                 </div>
             </div>
@@ -175,12 +567,31 @@
         
         <div class="footer-bottom">
             <p>© 2023 Ecommerce.</p>
-            <div class="language-selector">
-                <div class="flag"></div>
-                <span>English</span>
-                <span>▲</span>
+             <div class="language-selector">
+                <span>
+                    <img src="/Images/flags/icon-2.svg" alt="">
+                </span>
+                 <span>English </span>
+                <i class="fas fa-chevron-up"></i>
+
+                <!-- Dropdown -->
+            <div class="language-dropdown">
+                <div class="lang-option"><img src="/Images/flags/icon-2.svg" alt=""> English</div>
+                <div class="lang-option"><img src="/Images/flags/icon-1.svg" alt=""> Urdu</div>
+                <div class="lang-option"><img src="/Images/flags/icon-3.svg" alt=""> French</div>
+                <div class="lang-option"><img src="/Images/flags/icon-4.svg" alt=""> German</div>
+                <div class="lang-option"><img src="/Images/flags/icon-5.svg" alt=""> Spanish</div>
+                <div class="lang-option"><img src="/Images/flags/icon-6.svg" alt=""> Italian</div>
+                <div class="lang-option"><img src="/Images/flags/icon-7.svg" alt=""> Chinese</div>
+                <div class="lang-option"><img src="/Images/flags/icon-8.svg" alt=""> Japanese</div>
+                <div class="lang-option"><img src="/Images/flags/icon-9.svg" alt=""> Russian</div>
+                <div class="lang-option"><img src="/Images/flags/icon.svg" alt=""> Arabic</div>
+            </div>
             </div>
         </div>
     </footer>
+
+
+    <script src="../Java-Script/main.js"></script>
 </body>
 </html>

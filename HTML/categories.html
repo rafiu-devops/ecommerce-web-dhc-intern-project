@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecom-site</title>
+    <title>Ecom-site (Products)</title>
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="../CSS/categories.css">
 
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--Flags rendering-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+
 
 
 </head>
@@ -17,10 +20,12 @@
 <body>
     <!-- Header -->
     <header class="header">
-         <div class="brand">
-            <div class="brand-icon">🛍️</div>
+         <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+            <div class="brand-icon">
+                <img src="/Images/nav-svgs/logo-symbol.svg" alt="">
+            </div>
             <div class="brand-text">Brand</div>
-        </div>
+        </a>
         
         <div class="search-section">
             <input type="text" class="search-input" placeholder="Search">
@@ -33,37 +38,39 @@
             <button class="search-btn">Search</button>
         </div>
         
-                <div class="header-icons">
+          <div class="header-icons">
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-user"></i>          <!-- Profile icon -->
+                 <img src="/Images/nav-svgs//profile.svg" alt="Profile Icon"> <!-- Profile icon -->
                 </div>
                 <span class="icon-text">Profile</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-envelope"></i>      <!-- Message icon -->
+                    <img src="/Images/nav-svgs//sms.svg" alt="Message Icon">     <!-- Message icon -->
                 </div>
                 <span class="icon-text">Message</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-box"></i>           <!-- Orders icon -->
+                     <img src="/Images/nav-svgs//orders.svg" alt="Order Icon">        <!-- Orders icon -->
                 </div>
                 <span class="icon-text">Orders</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
+                     <img src="/Images/nav-svgs//cart.svg" alt="Cart Icon"> <!-- Cart icon -->
                 </div>
                 <span class="icon-text">My cart</span>
             </a>
         </div>
+
     </header>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
+        <a href="/HTML/categories-two.html" class="category-link">
             <div class="category-menu">
                 <div class="hamburger">
                     <span></span>
@@ -72,6 +79,7 @@
                 </div>
                 <span>All category</span>
             </div>
+        </a>
             
             <div class="nav-menu">
                 <a href="#" class="nav-item">Hot offers</a>
@@ -82,17 +90,46 @@
             </div>
         </div>
         
-        <div class="nav-right">
-            <div class="nav-option">
-                <span>English, USD</span>
-                <span>▼</span>
-            </div>
-            <div class="nav-option">
-                <span>Ship to</span>
-                <div class="flag"></div>
-                <span>▼</span>
-            </div>
+            <div class="nav-right">
+    <!-- Language & Currency Dropdown -->
+    <div class="nav-option dropdown-wrapper" id="langCurrencyDropdown">
+        <span class="selected-option">English, USD</span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="dropdown">
+            <div>English, USD</div>
+            <div>Urdu, PKR</div>
+            <div>Hindi, INR</div>
+            <div>French, EUR</div>
+            <div>German, EUR</div>
+            <div>Spanish, EUR</div>
+            <div>Chinese, CNY</div>
+            <div>Japanese, JPY</div>
+            <div>Arabic, AED</div>
+            <div>Russian, RUB</div>
         </div>
+    </div>
+
+    <!-- Country Dropdown -->
+    <div class="nav-option dropdown-wrapper" id="countryDropdown">
+        <span>Ship to</span>
+        <span class="selected-option"> 
+            <img src="/Images/flags/icon-8.svg" alt=""> 
+        </span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="dropdown">
+            <div>  <img src="/Images/flags/icon-8.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-1.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-2.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-3.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-4.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-5.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-6.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-7.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-9.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon.svg" alt=""> </div>
+        </div>
+    </div>
+</div>
     </nav>
 
     <!-- Breadcrumb Navigation -->
@@ -276,8 +313,10 @@
                         <option>Newest</option>
                     </select>
                     <div class="view-toggle">
-                        <button class="view-btn active"><i class="fas fa-th-large"></i></button>
-                        <button class="view-btn"><i class="fas fa-list"></i></button>
+                        <a  href="/HTML/categories-two.html"  class="view-btn"><i class="fas fa-th-large"></i></a>
+                         <a href="categories-two.html" class="view-btn active">
+                            <i class="fas fa-list"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -285,28 +324,32 @@
             <!-- Products List -->
             <div class="products-list">
                 <!-- Product 1 - iPhone -->
-                <div class="product-item">
-                    <div class="product-image product-iphone"></div>
-                    <div class="product-details">
-                        <h3 class="product-title">Canon Cinera EOS 2000, Black 10x zoom</h3>
-                        <div class="product-price">
-                            $998.00
-                            <span class="original-price">$1128.00</span>
+                <a href="/HTML/productpage.html" class="product-item-link">
+                        <div class="product-item">
+                            <div class="product-image product-iphone"></div>
+                            <div class="product-details">
+                                <h3 class="product-title">Canon Cinera EOS 2000, Black 10x zoom</h3>
+                                <div class="product-price">
+                                    $998.00
+                                    <span class="original-price">$1128.00</span>
+                                </div>
+                                <div class="product-rating">
+                                    <span class="rating-stars">★★★★☆</span>
+                                    <span class="rating-count">7.5 • 154 orders</span>
+                                    <span class="free-shipping">Free Shipping</span>
+                                </div>
+                                <p class="product-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <span class="view-details">View details</span>
+                            </div>
+                            <button class="wishlist-btn">♡</button>
                         </div>
-                        <div class="product-rating">
-                            <span class="rating-stars">★★★★☆</span>
-                            <span class="rating-count">7.5 • 154 orders</span>
-                            <span class="free-shipping">Free Shipping</span>
-                        </div>
-                        <p class="product-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <a href="#" class="view-details">View details</a>
-                    </div>
-                    <button class="wishlist-btn">♡</button>
-                </div>
+                    </a>
+ 
 
                 <!-- Product 2 - Camera -->
+               <a href="/HTML/productpage.html" class="product-item-link">
                 <div class="product-item">
                     <div class="product-image product-camera"></div>
                     <div class="product-details">
@@ -320,12 +363,12 @@
                         <p class="product-description">
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <a href="#" class="view-details">View details</a>
-                    </div>
+                             <span class="view-details">View details</span>                    </div>
                     <button class="wishlist-btn">♡</button>
-                </div>
+                </div></a>
 
                 <!-- Product 3 - Another Camera -->
+                 <a href="/HTML/productpage.html" class="product-item-link">
                 <div class="product-item">
                     <div class="product-image product-camera-2"></div>
                     <div class="product-details">
@@ -339,12 +382,13 @@
                         <p class="product-description">
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <a href="#" class="view-details">View details</a>
+                         <span class="view-details">View details</span>
                     </div>
                     <button class="wishlist-btn">♡</button>
-                </div>
+                </div></a>
 
                 <!-- Product 4 - Laptop -->
+               <a href="/HTML/productpage.html" class="product-item-link">
                 <div class="product-item">
                     <div class="product-image product-laptop"></div>
                     <div class="product-details">
@@ -358,12 +402,13 @@
                         <p class="product-description">
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <a href="#" class="view-details">View details</a>
+                         <span class="view-details">View details</span>
                     </div>
                     <button class="wishlist-btn">♡</button>
-                </div>
+                </div></a>
 
                 <!-- Product 5 - Watch -->
+                <a href="/HTML/productpage.html" class="product-item-link">
                 <div class="product-item">
                     <div class="product-image product-watch"></div>
                     <div class="product-details">
@@ -380,12 +425,13 @@
                         <p class="product-description">
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <a href="#" class="view-details">View details</a>
+                         <span class="view-details">View details</span>
                     </div>
                     <button class="wishlist-btn">♡</button>
-                </div>
+                </div></a>
 
                 <!-- Product 6 - Headphones -->
+                <a href="/HTML/productpage.html" class="product-item-link">
                 <div class="product-item">
                     <div class="product-image product-headphones"></div>
                     <div class="product-details">
@@ -399,10 +445,10 @@
                         <p class="product-description">
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <a href="#" class="view-details">View details</a>
+                         <span class="view-details">View details</span>
                     </div>
                     <button class="wishlist-btn">♡</button>
-                </div>
+                </div></a>
             </div>
         </div>
     </div>
@@ -447,7 +493,9 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="brand">
-                    <div class="brand-icon">🛍️</div>
+                    <div class="brand-icon">
+                         <img src="/Images/nav-svgs/logo-symbol.svg" alt=""> 
+                    </div>
                     <div class="brand-text">Brand</div>
                 </div>
                 <p class="footer-description">
@@ -455,20 +503,30 @@
                 </p>
 
                  <div class="social-icons">
-                    <a href="#" class="social-icon facebook">
-                        <i class="fab fa-facebook-f"></i>
+                   <a href="#" class="social-icon facebook">
+                        <i>
+                            <img src="/Images/social/fb.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon twitter">
-                        <i class="fab fa-twitter"></i>
+                        <i>
+                            <img src="/Images/social/twit.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon linkedin">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i>
+                            <img src="/Images/social/linkIn.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
+                        <i>
+                            <img src="/Images/social/insta.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon youtube">
-                        <i class="fab fa-youtube"></i>
+                        <i>
+                            <img src="/Images/social/yt.svg" alt="">
+                        </i>
                     </a>
                 </div>
             </div>
@@ -508,26 +566,50 @@
             <div class="footer-column">
                 <h4>Get app</h4>
                 <div class="app-downloads">
-                    <a href="#" class="app-btn apple">
-                        <i class="fab fa-apple"></i>
-                        <span>App Store</span>
+                     <a href="#" class="app-btn apple">
+                        <i>
+                            <img src="/Images/Misc/market-button.svg" alt="">
+                        </i>
+                        
                     </a>
                     <a href="#" class="app-btn google">
-                        <i class="fab fa-google-play"></i>
-                        <span>Google Play</span>
+                        <i>
+                            <img src="/Images/Misc/Group.svg" alt="">
+                        </i>
+                        
                     </a>
                 </div>
             </div>
         </div>
         
-        <div class="footer-bottom">
+         <div class="footer-bottom">
             <p>© 2023 Ecommerce.</p>
-            <div class="language-selector">
-                <div class="flag"></div>
-                <span>English</span>
-                <span>▲</span>
+             <div class="language-selector">
+                <span>
+                    <img src="/Images/flags/icon-2.svg" alt="">
+                </span>
+                 <span>English </span>
+                <i class="fas fa-chevron-up"></i>
+
+                <!-- Dropdown -->
+            <div class="language-dropdown">
+                <div class="lang-option"><img src="/Images/flags/icon-2.svg" alt=""> English</div>
+                <div class="lang-option"><img src="/Images/flags/icon-1.svg" alt=""> Urdu</div>
+                <div class="lang-option"><img src="/Images/flags/icon-3.svg" alt=""> French</div>
+                <div class="lang-option"><img src="/Images/flags/icon-4.svg" alt=""> German</div>
+                <div class="lang-option"><img src="/Images/flags/icon-5.svg" alt=""> Spanish</div>
+                <div class="lang-option"><img src="/Images/flags/icon-6.svg" alt=""> Italian</div>
+                <div class="lang-option"><img src="/Images/flags/icon-7.svg" alt=""> Chinese</div>
+                <div class="lang-option"><img src="/Images/flags/icon-8.svg" alt=""> Japanese</div>
+                <div class="lang-option"><img src="/Images/flags/icon-9.svg" alt=""> Russian</div>
+                <div class="lang-option"><img src="/Images/flags/icon.svg" alt=""> Arabic</div>
+            </div>
+
             </div>
         </div>
+
     </footer>
+
+    <script src="/Java-Script/main.js"></script>
 </body>
 </html>

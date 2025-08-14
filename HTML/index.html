@@ -5,28 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecom-site (Home)</title>
     <link rel="stylesheet" href="../CSS/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    
     
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+   
 
 
 </head>
 
    
-<body>
+<body class="home-page">
     <!-- Header -->
     <header class="header">
-         <div class="brand">
-            <div class="brand-icon">🛍️</div>
+        <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+            <div class="brand-icon">
+                <img src="/Images/nav-svgs/logo-symbol.svg" alt="">
+            </div>
             <div class="brand-text">Brand</div>
-        </div>
+        </a>
         
         <div class="search-section">
             <input type="text" class="search-input" placeholder="Search">
             <select class="category-dropdown">
-                <option>All category</option>
+                <option>All Products</option>
                 <option>Electronics</option>
                 <option>Fashion</option>
                 <option>Home</option>
@@ -37,25 +39,25 @@
                 <div class="header-icons">
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-user"></i>          <!-- Profile icon -->
+                 <img src="/Images/nav-svgs//profile.svg" alt="Profile Icon"> <!-- Profile icon -->
                 </div>
                 <span class="icon-text">Profile</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-envelope"></i>      <!-- Message icon -->
+                    <img src="/Images/nav-svgs//sms.svg" alt="Message Icon">     <!-- Message icon -->
                 </div>
                 <span class="icon-text">Message</span>
             </a>
             <a href="#" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-box"></i>           <!-- Orders icon -->
+                     <img src="/Images/nav-svgs//orders.svg" alt="Order Icon">        <!-- Orders icon -->
                 </div>
                 <span class="icon-text">Orders</span>
             </a>
-            <a href="#" class="icon-item">
+            <a href="/HTML/cartchekout.html" class="icon-item">
                 <div class="icon">
-                    <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
+                     <img src="/Images/nav-svgs//cart.svg" alt="Cart Icon"> <!-- Cart icon -->
                 </div>
                 <span class="icon-text">My cart</span>
             </a>
@@ -65,49 +67,85 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
-            <div class="category-menu">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+           <a href="/HTML/categories-two.html" class="category-link">
+                <div class="category-menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span>All category</span>
                 </div>
-                <span>All category</span>
-            </div>
+            </a>
+
+           
             
             <div class="nav-menu">
                 <a href="#" class="nav-item">Hot offers</a>
                 <a href="#" class="nav-item">Gift boxes</a>
                 <a href="#" class="nav-item">Projects</a>
-                <a href="#" class="nav-item">Menu item</a>
+                <a href="/HTML/categories.html" class="nav-item">Menu item</a>
                 <a href="#" class="nav-item has-dropdown">Help</a>
             </div>
         </div>
         
         <div class="nav-right">
-            <div class="nav-option">
-                <span>English, USD</span>
-                <span>▼</span>
-            </div>
-            <div class="nav-option">
-                <span>Ship to</span>
-                <div class="flag"></div>
-                <span>▼</span>
-            </div>
+    <!-- Language & Currency Dropdown -->
+    <div class="nav-option dropdown-wrapper" id="langCurrencyDropdown">
+        <span class="selected-option">English, USD</span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="dropdown">
+            <div>English, USD</div>
+            <div>Urdu, PKR</div>
+            <div>Hindi, INR</div>
+            <div>French, EUR</div>
+            <div>German, EUR</div>
+            <div>Spanish, EUR</div>
+            <div>Chinese, CNY</div>
+            <div>Japanese, JPY</div>
+            <div>Arabic, AED</div>
+            <div>Russian, RUB</div>
         </div>
+    </div>
+
+    <!-- Country Dropdown -->
+    <div class="nav-option dropdown-wrapper" id="countryDropdown">
+        <span>Ship to</span>
+        <span class="selected-option">
+            <img src="/Images/flags/icon-8.svg" alt=""> 
+        </span>
+        <i class="fas fa-chevron-down"></i>
+        <div class="dropdown">
+          
+            <div>  <img src="/Images/flags/icon-8.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-1.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-2.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-3.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-4.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-5.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-6.svg" alt=""> </div>
+            <div>  <img src="/Images/flags/icon-7.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon-9.svg" alt=""></div>
+            <div>  <img src="/Images/flags/icon.svg" alt=""> </div>
+            
+        </div>
+    </div>
+</div>
+
     </nav>
 
     <!-- Main Section -->
     <div class="main-section">
         <!-- Categories Sidebar -->
         <div class="categories-sidebar">
-            <div class="category-item">Automobiles</div>
-            <div class="category-item">Clothes and wear</div>
-            <div class="category-item">Home interiors</div>
-            <div class="category-item">Computer and tech</div>
-            <div class="category-item">Tools, equipments</div>
-            <div class="category-item">Sports and outdoor</div>
-            <div class="category-item">Animal and pets</div>
-            <div class="category-item">Machinery tools</div>
+            <a href="/HTML/categories-two.html" class="category-item"> Automobiles</a>
+            <a href="/HTML/categories-two.html" class="category-item">Clothes and wear</a>
+            <a href="/HTML/categories-two.html" class="category-item">Home interiors</a>
+            <a href="/HTML/categories-two.html" class="category-item">Computer and tech</a>
+            <a href="/HTML/categories-two.html" class="category-item">Tools, equipments</a>
+            <a href="/HTML/categories-two.html" class="category-item">Sports and outdoor</a>
+            <a href="/HTML/categories-two.html" class="category-item">Animal and pets</a>    
+            <a href="/HTML/categories-two.html" class="category-item">Machinery tools</a>
         </div>
 
         <!-- Main Banner -->
@@ -115,7 +153,7 @@
             <div class="banner-content">
                 <div class="banner-title">Latest trending</div>
                 <div class="banner-subtitle">Electronic items</div>
-                <button class="learn-more-btn">Learn more</button>
+                <a href="/HTML/categories-two.html" class="learn-more-btn">Learn more</a>
             </div>
             <div class="banner-image">
             </div>
@@ -125,7 +163,9 @@
         <div class="side-cards">
             <div class="side-card card-1">
                 <div class="user-greeting">
-                    <div class="user-avatar">👤</div>
+                    <div class="user-avatar">
+                        <img src="/Images/svg-logos/user-icon.svg" alt="">
+                    </div>
                     <div class="greeting-text">Hi, user<br>let's get started</div>
                 </div>
                 <div class="card-buttons">
@@ -171,7 +211,9 @@
         <!-- Product Cards -->
         <div class="product-card">
             <div class="product-image">
+                <a href="/HTML/categories.html">
                 <img src="/Images/main-page/tech/8.png" alt="">
+                </a>
             </div>
             <div class="product-name">Smart watches</div>
             <div class="product-discount">-25%</div>
@@ -179,7 +221,9 @@
 
         <div class="product-card">
             <div class="product-image">
+                 <a href="/HTML/categories.html"></a>
                 <img src="/Images/main-page/tech/7.png" alt="">
+                </a>
             </div>
             <div class="product-name">Laptops</div>
             <div class="product-discount">-15%</div>
@@ -187,7 +231,9 @@
 
         <div class="product-card">
             <div class="product-image">
+                <a href="/HTML/categories.html">
                 <img src="/Images/main-page/tech/6.png" alt="">
+                </a>
             </div>
             <div class="product-name">GoPro cameras</div>
             <div class="product-discount">-40%</div>
@@ -195,7 +241,9 @@
 
         <div class="product-card">
             <div class="product-image">
+                <a href="/HTML/categories.html">
                 <img src="/Images/main-page/tech/9.png" alt="">
+                </a>
             </div>
             <div class="product-name">Headphones</div>
             <div class="product-discount">-25%</div>
@@ -203,7 +251,9 @@
 
         <div class="product-card">
             <div class="product-image">
+                  <a href="/HTML/categories.html">
                 <img src="/Images/main-page/phones/3.png" alt="">
+                </a>
             </div>
             <div class="product-name">Canon cameras</div>
             <div class="product-discount">-25%</div>
@@ -443,20 +493,26 @@
     <div class="recommended-items-section">
         <h2 class="recommended-title">Recommended items</h2>
         
+    
         <div class="recommended-products-grid">
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
-                    <img src="/Images/main-page/cloth/1.png" alt="">
+                     <a href="../HTML/productpage.html">
+                        <img src="/Images/main-page/cloth/1.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$10.30</div>
                     <div class="recommended-product-name">T-shirts with multiple colors, for men</div>
                 </div>
             </div>
+        
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/cloth/3.png" alt="">
+                </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$10.30</div>
@@ -466,7 +522,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/cloth/7.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$12.50</div>
@@ -476,7 +534,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/cloth/6.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$34.00</div>
@@ -486,7 +546,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/cloth/5-1.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$99.00</div>
@@ -496,7 +558,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/cloth/4.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$9.99</div>
@@ -506,7 +570,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/tech/9.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$8.99</div>
@@ -516,7 +582,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/cloth/5.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$10.30</div>
@@ -526,7 +594,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/interior/3.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$10.30</div>
@@ -536,7 +606,9 @@
 
             <div class="recommended-product-card">
                 <div class="recommended-product-image">
+                    <a href="../HTML/productpage.html">
                     <img src="/Images/main-page/tech/10.png" alt="">
+                    </a>
                 </div>
                 <div class="recommended-product-info">
                     <div class="recommended-product-price">$80.95</div>
@@ -592,7 +664,9 @@
         <div class="suppliers-grid">
             <div class="supplier-item">
                 <div>
-                <span class="fi fi-ae"></span>
+                <span>
+                    <img src="/Images/flags/icon.svg" alt="uae-flag">
+                </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">Arabic Emirates</div>
@@ -603,7 +677,9 @@
             <div class="supplier-item">
                 <div>
                     <!-- Australia -->
-                    <span class="fi fi-au"></span>
+                    <span>
+                        <img src="/Images/flags/icon-1.svg" alt="">
+                    </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">Australia</div>
@@ -614,9 +690,12 @@
             <div class="supplier-item">
                 <div>
                     <!-- United States -->
-                    <span class="fi fi-us"></span>
+                    <span>
+                        <img src="/Images/flags/icon-2.svg" alt="">
+                    </span>
                 </div>
                 <div class="supplier-info">
+
                     <div class="country-name">United States</div>
                     <div class="website">shopname.ae</div>
                 </div>
@@ -625,7 +704,9 @@
             <div class="supplier-item">
                 <div>
                     <!-- Russia -->
-                    <span class="fi fi-ru"></span>
+                    <span>
+                        <img src="/Images/flags/icon-3.svg" alt="">
+                    </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">Russia</div>
@@ -636,7 +717,9 @@
             <div class="supplier-item">
                 <div>
                     <!-- Italy -->
-                <span class="fi fi-it"></span>
+                <span>
+                    <img src="/Images/flags/icon-4.svg" alt="">
+                </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">Italy</div>
@@ -647,7 +730,9 @@
             <div class="supplier-item">
                 <div>
                     <!-- Denmark -->
-                <span class="fi fi-dk"></span>
+                <span>
+                    <img src="/Images/flags/icon-5.svg" alt="">
+                </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">Denmark</div>
@@ -658,7 +743,9 @@
             <div class="supplier-item">
                 <div>
                     <!-- France -->
-                <span class="fi fi-fr"></span>
+                <span>
+                    <img src="/Images/flags/icon-6.svg" alt="">
+                </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">France</div>
@@ -669,7 +756,9 @@
             <div class="supplier-item">
                 <div>
                     <!-- Saudi Arabia -->
-                <span class="fi fi-sa"></span>
+                <span>
+                    <img src="/Images/flags/icon-7.svg" alt="">
+                </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">Saudi Arabia</div>
@@ -680,7 +769,9 @@
             <div class="supplier-item">
                 <div>
                     <!-- China -->
-                <span class="fi fi-cn"></span>
+                <span>
+                    <img src="/Images/flags/icon-8.svg" alt="">
+                </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">China</div>
@@ -690,7 +781,9 @@
 
             <div class="supplier-item">
                 <div>
-                    <span class="fi fi-gb"></span>
+                    <span>
+                        <img src="/Images/flags/icon-9.svg" alt="">
+                    </span>
                 </div>
                 <div class="supplier-info">
                     <div class="country-name">Great Britain</div>
@@ -720,7 +813,9 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="brand">
-                    <div class="brand-icon">🛍️</div>
+                    <div class="brand-icon">
+                         <img src="/Images/nav-svgs/logo-symbol.svg" alt=""> <!--Brand Icon-->
+                    </div>
                     <div class="brand-text">Brand</div>
                 </div>
                 <p class="footer-description">
@@ -729,19 +824,29 @@
 
                  <div class="social-icons">
                     <a href="#" class="social-icon facebook">
-                        <i class="fab fa-facebook-f"></i>
+                        <i>
+                            <img src="/Images/social/fb.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon twitter">
-                        <i class="fab fa-twitter"></i>
+                        <i>
+                            <img src="/Images/social/twit.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon linkedin">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i>
+                            <img src="/Images/social/linkIn.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon instagram">
-                        <i class="fab fa-instagram"></i>
+                        <i>
+                            <img src="/Images/social/insta.svg" alt="">
+                        </i>
                     </a>
                     <a href="#" class="social-icon youtube">
-                        <i class="fab fa-youtube"></i>
+                        <i>
+                            <img src="/Images/social/yt.svg" alt="">
+                        </i>
                     </a>
                 </div>
             </div>
@@ -782,12 +887,16 @@
                 <h4>Get app</h4>
                 <div class="app-downloads">
                     <a href="#" class="app-btn apple">
-                        <i class="fab fa-apple"></i>
-                        <span>App Store</span>
+                        <i>
+                            <img src="/Images/Misc/market-button.svg" alt="">
+                        </i>
+                        
                     </a>
                     <a href="#" class="app-btn google">
-                        <i class="fab fa-google-play"></i>
-                        <span>Google Play</span>
+                        <i>
+                            <img src="/Images/Misc/Group.svg" alt="">
+                        </i>
+                        
                     </a>
                 </div>
             </div>
@@ -795,12 +904,30 @@
         
         <div class="footer-bottom">
             <p>© 2023 Ecommerce.</p>
-            <div class="language-selector">
-                <div class="flag"></div>
-                <span>English</span>
-                <span>▲</span>
-            </div>
+           <div class="language-selector">
+    <span>
+        <img src="/Images/flags/icon-2.svg" alt="">
+    </span>
+    <span>English</span>
+    <i class="fas fa-chevron-up"></i>
+
+    <!-- Dropdown -->
+    <div class="language-dropdown">
+        <div class="lang-option"><img src="/Images/flags/icon-2.svg" alt=""> English</div>
+        <div class="lang-option"><img src="/Images/flags/icon-1.svg" alt=""> Urdu</div>
+        <div class="lang-option"><img src="/Images/flags/icon-3.svg" alt=""> French</div>
+        <div class="lang-option"><img src="/Images/flags/icon-4.svg" alt=""> German</div>
+        <div class="lang-option"><img src="/Images/flags/icon-5.svg" alt=""> Spanish</div>
+        <div class="lang-option"><img src="/Images/flags/icon-6.svg" alt=""> Italian</div>
+        <div class="lang-option"><img src="/Images/flags/icon-7.svg" alt=""> Chinese</div>
+        <div class="lang-option"><img src="/Images/flags/icon-8.svg" alt=""> Japanese</div>
+        <div class="lang-option"><img src="/Images/flags/icon-9.svg" alt=""> Russian</div>
+        <div class="lang-option"><img src="/Images/flags/icon.svg" alt=""> Arabic</div>
+    </div>
+</div>
         </div>
     </footer>
+
+    <script src="../Java-Script/main.js"></script>
 </body>
 </html>

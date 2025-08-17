@@ -293,28 +293,24 @@ flex-shrink: 0;
 }
 
 .payment-american-express {
-    background-image: url('/Images/svg-logos/Logo.svg');
     background-repeat: no-repeat;
-    background-size: 70% auto;
+    background-size: 90% auto;
     background-position: center;
 }
 
 .payment-mastercard {
-    background-image: url('/Images/svg-logos/Logo-1.svg');
     background-repeat: no-repeat;
     background-size: 70% auto;
     background-position: center;
 }
 
 .payment-paypal {
-    background-image: url('/Images/svg-logos/Logo-2.svg');
     background-repeat: no-repeat;
     background-size: 70% auto;
     background-position: center;
 }
 
 .payment-visa {
-    background-image: url('/Images/svg-logos/Logo-3.svg');
     background-repeat: no-repeat;
     background-size: 70% auto;
     background-position: center;
